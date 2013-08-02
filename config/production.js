@@ -17,7 +17,7 @@
 */
 
 var parse_url = require('./parse_url')
-  , MONGO_PARSED = parse_url(process.env.MONGOHQ_URL)
+  , MONGO_PARSED = parse_url(process.env.MONGOLAB_URI)
   , config = {
       detailedErrors: false
     , hostname: "0.0.0.0"
