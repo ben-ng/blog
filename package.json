@@ -1,0 +1,45 @@
+{
+  "name": "scotch-blog",
+  "version": "0.1.6",
+  "description": "A really classy, dead simple, markdown based, blogging framework for node.js",
+  "main": "./bin/cli.js",
+  "bin": {
+    "scotch": "./bin/cli.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "highlight": "~0.2.x",
+    "underscore": "~1.4.x",
+    "marked": "~0.2.x",
+    "mongodb-wrapper": "~0.4.x",
+    "slugs": "~0.1.x",
+    "geddy": "~0.9.x",
+    "commander": "~1.2.0",
+    "utilities": "0.0.26",
+    "request": "~2.21.0",
+    "envoy": "0.0.x",
+    "kitten": "0.0.x",
+    "request": "2.21.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./node_modules/geddy/bin/cli.js jake test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Techwraith/scotch.git"
+  },
+  "keywords": [
+    "markdown",
+    "blog",
+    "geddy",
+    "framework",
+    "mongo",
+    "riak",
+    "postgres"
+  ],
+  "author": "Techwraith",
+  "license": "MIT"
+}
