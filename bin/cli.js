@@ -14,7 +14,7 @@ program
   .option('create <name>', 'create a new directory (<name>) and generate a new Scotch site in it.')
   .option('serve [port]', 'start the server, defaults to 80', 80)
   .option('generate', 'generate a static html site')
-  .option('import [folder]', 'import markdown files from folder, defaults to `./`', './')
+  .option('import [folder]', 'import markdown files from folder')
   .option('deploy', 'deploys a generated site')
   .option('upgrade', 'upgrades a site\'s database')
   .parse(process.argv);
@@ -124,13 +124,15 @@ var Controller = function () {
     });
   };
 
+  /*
+  * As of right now, this will just copy the createdAt field over to
+  * the publishedAt field
+  */
   this.upgrade = function () {
 
     console.log('upgrading database to latest version');
 
     var upgradePost = function (post, cb) {
-          console.log('Upgrading ' + post.title);
-
           post.publishedAt = post.createdAt;
 
           post.save(cb);
