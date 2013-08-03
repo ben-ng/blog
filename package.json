@@ -22,7 +22,9 @@
     "envoy": "0.0.x",
     "kitten": "0.0.x",
     "request": "2.21.x",
-    "readmore": "0.0.x"
+    "readmore": "0.0.x",
+    "blockquote": "0.0.x",
+    "pullquote": "0.0.x"
   },
   "devDependencies": {},
   "scripts": {

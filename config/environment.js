@@ -11,6 +11,8 @@ var config = {
 , plugins: {
     formatters: [
       'readmore'
+    , 'pullquote'
+    , 'blockquote'
     ]
   }
 };
