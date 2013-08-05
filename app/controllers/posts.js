@@ -39,7 +39,7 @@ var Posts = function () {
     var self = this
       , current, next, previous;
 
-    geddy.model.Post.all({isPublished: true}, {sort: {'createdAt': 'desc'}}, function (err, posts){
+    geddy.model.Post.all({isPublished: true}, {sort: {'publishedAt': 'desc'}}, function (err, posts){
       current = _.find(posts, function(post){ return post.slug == params.slug});
       if (current) {
         current = current.toFormattedObj(params.action);
