@@ -44,6 +44,10 @@ var Post = function () {
       this.isPublished = true;
     }
 
+    if(!this.publishedAt) {
+      this.publishedAt = new Date();
+    }
+
     if (!this.slug) {
       this.slug = geddy.string.sluggerize(this.title);
     }
